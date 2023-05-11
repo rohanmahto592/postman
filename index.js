@@ -1,5 +1,5 @@
 
-const axios=require('axios')
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
 import prettyBytes from "pretty-bytes";
 import JSONEditor from "jsoneditor";
 const form = document.querySelector("[data-form]");
