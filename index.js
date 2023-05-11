@@ -44,7 +44,6 @@ form.addEventListener("submit", (e) => {
       updateResponseHeaders(response.headers);
     });
 });
-
 function createKeyValuePair() {
   const element = document
     .querySelector("[data-key-value-template]")
