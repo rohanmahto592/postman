@@ -38,7 +38,6 @@ form.addEventListener("submit", (e) => {
   })
     .catch((e) => e)
     .then((response) => {
-      redisClient.setEx(document.querySelector("[data-url]").value,defaultExpiration,JSON.stringify(response))
         const endTime=new Date().getMilliseconds();
       document.querySelector("[data-response-section]").classList.remove("d-none");
       updateResponseDetails(response,startTime,endTime);
