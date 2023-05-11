@@ -1,7 +1,7 @@
 
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-import prettyBytes from "pretty-bytes";
-import JSONEditor from "jsoneditor";
+import prettyBytes from 'https://cdn.jsdelivr.net/npm/pretty-bytes@6.1.0/+esm'
+import jsoneditor from 'https://cdn.jsdelivr.net/npm/jsoneditor@9.10.0/+esm'
 const form = document.querySelector("[data-form]");
 const defaultExpiration=3600
 const queryParamsContainer = document.querySelector("[data-query-params]");
@@ -42,7 +42,6 @@ form.addEventListener("submit", (e) => {
       updateResponseDetails(response,startTime,endTime);
       updateResponseEditor(response.data);
       updateResponseHeaders(response.headers);
-      console.log(response);
     });
 });
 
@@ -98,7 +97,7 @@ function updateResponseEditor(data) {
   const responseBody = document.querySelector("[data-json-response-body]");
   responseBody.innerHTML = "";
   const options = {};
-  const editor = new JSONEditor(responseBody, options);
+  const editor = new jsoneditor(responseBody, options);
   if (typeof data === "object") {
     editor.set(data);
   } else {
