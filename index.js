@@ -1,5 +1,5 @@
 
-import axios from "axios";
+const axios=require('axios')
 import prettyBytes from "pretty-bytes";
 import JSONEditor from "jsoneditor";
 const form = document.querySelector("[data-form]");
